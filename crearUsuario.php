@@ -44,7 +44,7 @@
 
   <div class="container">
     <div class="py-5 text-center">
-      <img width="600px" height="100px" src="IMG/logo2.png" alt="" width="72" height="72" class="">
+      <img width="600px" height="100px"  src="IMG/logo2.png" alt="" width="72" height="72" >
     </div>
 
     <h4 class="mb-3">Crear usuario</h4>

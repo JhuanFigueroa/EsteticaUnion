@@ -20,7 +20,8 @@ if ($user) {
       <link rel="stylesheet" href="plugins/jqvmap/jqvmap.min.css">
       <link rel="stylesheet" href="dist/css/adminlte.min.css">
       <link rel="stylesheet" href="inicio.css">
-    </head>
+      <script src="https://kit.fontawesome.com/132a104afa.js" crossorigin="anonymous"></script>  
+  </head>
 
     <body>
 
@@ -35,21 +36,21 @@ if ($user) {
 
 
         <aside class="aside1">
-          <a class="brand-link aside1">
-            <img src="IMG/logoblanco.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
+          <a class="brand-link aside1 men">
+            <img src="IMG/logoblanco.png" alt="AdminLTE Logo" class="brand-image imglogo img-circle elevation-3" style="opacity: .8">
             <span class="brand-text font-weight-light">Estetica Union</span>
           </a>
-          <a class="brand-link text-center">
+          <a class="brand-link text-center men">
             <label>MENU</label>
           </a>
-          <a class="brand-link">
-            <a href="InsertarServicio.php" class="btn btn-primary col-12">Insertar Servicio</a>
+          <a class="brand-link botones">
+            <a href="InsertarServicio.php" class="btnasid btn btn-primary">Insertar Servicio</a>
             <br><br>
-            <a href="verservicios.php" class="btn btn-primary col-12">Ver servicios</a>
+            <a href="verservicios.php" class="btn btn-primary btnasid1">Ver servicios</a>
             <br><br>
-            <a class="btn btn-danger col-12" href="insertarLocales.php">Insertar Locales</a>
+            <a class="btn btn-danger btnasid" href="insertarLocales.php">Insertar Locales</a>
             <br><br>
-            <a class="btn btn-danger col-12" href="verLocales.php">Ver Locales</a>
+            <a class="btn btn-danger btnasid1" href="verLocales.php">Ver Locales</a>
           </a>
         </aside>
 
@@ -57,7 +58,8 @@ if ($user) {
         <nav>
           <h3>Citas</h3>
         </nav>
-
+        <span class="placeholder col-12 bg-secondary"></span>
+      
 
         <section class="fondo12">
           <section class="section">
@@ -90,7 +92,52 @@ if ($user) {
             </section>
           </section>
           <section class="aside2">
-            <img src="IMG/InformacionSitio.gif" class="imagenServicios">
+          <div id="contentItemsCarrusel">
+            <div class="itemCarrusel">
+              <div class="tarjetaCarrusel" id="tarjeta1">
+                  <img src="IMG/1TINTE.png" alt="">
+              </div>
+              <div class="flechasCarrusel">
+                  <a href="#tarjeta3">
+                    <i class="fa-solid fa-circle-left"></i>
+                  </a>
+                  <a href="#tarjeta2">
+                    <i class="fa-solid fa-circle-right"></i>
+                  </a>
+              </div>
+            </div>
+            <div class="itemCarrusel">
+              <div class="tarjetaCarrusel" id="tarjeta2">
+              <img src="IMG/2CORTE.png" alt="">
+              </div>
+              <div class="flechasCarrusel">
+                  <a href="#tarjeta1">
+                    <i class="fa-solid fa-circle-left"></i>
+                  </a>
+                  <a href="#tarjeta3">
+                    <i class="fa-solid fa-circle-right"></i>
+                  </a>
+              </div>
+            </div>
+            <div class="itemCarrusel">
+              <div class="tarjetaCarrusel" id="tarjeta3">
+              <img src="IMG/3TINTEBARBA.jpg" alt="">
+              </div>
+              <div class="flechasCarrusel">
+                  <a href="#tarjeta2">
+                    <i class="fa-solid fa-circle-left"></i>
+                  </a>
+                  <a href="#tarjeta1">
+                    <i class="fa-solid fa-circle-right"></i>
+                  </a>
+              </div>
+            </div>
+          </div>
+          <div id="contePuntos">
+            <a href="#tarjeta1">*</a>
+            <a href="#tarjeta2">*</a>
+            <a href="#tarjeta3">*</a>
+          </div>
           </section>
         </section>
 

@@ -11,7 +11,7 @@
  Target Server Version : 80029
  File Encoding         : 65001
 
- Date: 22/06/2022 15:29:56
+ Date: 29/06/2022 20:09:00
 */
 
 SET NAMES utf8mb4;
@@ -35,36 +35,53 @@ CREATE TABLE `cita` (
   KEY `idlocal` (`idlocal`) USING BTREE,
   CONSTRAINT `idlocal` FOREIGN KEY (`idlocal`) REFERENCES `locales` (`id_local`) ON DELETE RESTRICT ON UPDATE RESTRICT,
   CONSTRAINT `idUsuarios` FOREIGN KEY (`idUsuarios`) REFERENCES `usuario` (`id_usuarios`) ON DELETE RESTRICT ON UPDATE RESTRICT
-) ENGINE=InnoDB AUTO_INCREMENT=31 DEFAULT CHARSET=latin1 ROW_FORMAT=DYNAMIC;
+) ENGINE=InnoDB AUTO_INCREMENT=48 DEFAULT CHARSET=latin1 ROW_FORMAT=DYNAMIC;
 
 -- ----------------------------
 -- Records of cita
 -- ----------------------------
 BEGIN;
-INSERT INTO `cita` (`id_cita`, `alias`, `fecha`, `hora`, `status`, `idUsuarios`, `idlocal`, `total_cita`) VALUES (6, 'Cita Emer', '2022-05-13', '13:00:00', '1', 3, 3, 200);
+INSERT INTO `cita` (`id_cita`, `alias`, `fecha`, `hora`, `status`, `idUsuarios`, `idlocal`, `total_cita`) VALUES (6, 'Cita Emer', '2022-05-13', '13:00:00', '0', 3, 3, 200);
 INSERT INTO `cita` (`id_cita`, `alias`, `fecha`, `hora`, `status`, `idUsuarios`, `idlocal`, `total_cita`) VALUES (7, 'Cita Emer', '2022-05-13', '14:00:00', '0', 3, 3, 0);
 INSERT INTO `cita` (`id_cita`, `alias`, `fecha`, `hora`, `status`, `idUsuarios`, `idlocal`, `total_cita`) VALUES (9, 'Corte jose', '2022-06-24', '17:30:00', '0', 5, 5, 270);
-INSERT INTO `cita` (`id_cita`, `alias`, `fecha`, `hora`, `status`, `idUsuarios`, `idlocal`, `total_cita`) VALUES (10, 'Corte jose', '2022-06-25', '17:00:00', '1', 5, 5, 0);
-INSERT INTO `cita` (`id_cita`, `alias`, `fecha`, `hora`, `status`, `idUsuarios`, `idlocal`, `total_cita`) VALUES (11, 'Teñido de pelo', '2022-06-25', '18:09:00', '1', 5, 3, 0);
-INSERT INTO `cita` (`id_cita`, `alias`, `fecha`, `hora`, `status`, `idUsuarios`, `idlocal`, `total_cita`) VALUES (12, 'Cita 2', '2022-06-23', '18:18:00', '1', 5, 3, 0);
-INSERT INTO `cita` (`id_cita`, `alias`, `fecha`, `hora`, `status`, `idUsuarios`, `idlocal`, `total_cita`) VALUES (13, 'Cita 2', '2022-06-23', '18:18:00', '1', 5, 3, 0);
-INSERT INTO `cita` (`id_cita`, `alias`, `fecha`, `hora`, `status`, `idUsuarios`, `idlocal`, `total_cita`) VALUES (14, 'Cita 2', '2022-06-23', '18:18:00', '1', 5, 3, 0);
-INSERT INTO `cita` (`id_cita`, `alias`, `fecha`, `hora`, `status`, `idUsuarios`, `idlocal`, `total_cita`) VALUES (15, 'Cita 2', '2022-06-23', '18:18:00', '1', 5, 3, 0);
-INSERT INTO `cita` (`id_cita`, `alias`, `fecha`, `hora`, `status`, `idUsuarios`, `idlocal`, `total_cita`) VALUES (16, 'Cita 2', '2022-06-23', '18:18:00', '1', 5, 3, 0);
-INSERT INTO `cita` (`id_cita`, `alias`, `fecha`, `hora`, `status`, `idUsuarios`, `idlocal`, `total_cita`) VALUES (17, 'Cita 3', '2022-06-24', '14:45:00', '1', 5, 3, 0);
-INSERT INTO `cita` (`id_cita`, `alias`, `fecha`, `hora`, `status`, `idUsuarios`, `idlocal`, `total_cita`) VALUES (18, 'Cita 3', '2022-06-24', '14:45:00', '1', 5, 3, 0);
-INSERT INTO `cita` (`id_cita`, `alias`, `fecha`, `hora`, `status`, `idUsuarios`, `idlocal`, `total_cita`) VALUES (19, 'Cita 3', '2022-06-24', '14:45:00', '1', 5, 3, 0);
-INSERT INTO `cita` (`id_cita`, `alias`, `fecha`, `hora`, `status`, `idUsuarios`, `idlocal`, `total_cita`) VALUES (20, 'Cita 3', '2022-06-24', '14:45:00', '1', 5, 3, 0);
-INSERT INTO `cita` (`id_cita`, `alias`, `fecha`, `hora`, `status`, `idUsuarios`, `idlocal`, `total_cita`) VALUES (21, 'Cita 3', '2022-06-24', '14:45:00', '1', 5, 3, 0);
-INSERT INTO `cita` (`id_cita`, `alias`, `fecha`, `hora`, `status`, `idUsuarios`, `idlocal`, `total_cita`) VALUES (22, 'cita 4', '2022-06-24', '14:49:00', '1', 5, 3, 0);
-INSERT INTO `cita` (`id_cita`, `alias`, `fecha`, `hora`, `status`, `idUsuarios`, `idlocal`, `total_cita`) VALUES (23, 'cita 4', '2022-06-24', '14:49:00', '1', 5, 3, 0);
-INSERT INTO `cita` (`id_cita`, `alias`, `fecha`, `hora`, `status`, `idUsuarios`, `idlocal`, `total_cita`) VALUES (24, 'cita 5', '2022-06-11', '14:50:00', '1', 5, 5, 0);
-INSERT INTO `cita` (`id_cita`, `alias`, `fecha`, `hora`, `status`, `idUsuarios`, `idlocal`, `total_cita`) VALUES (25, 'cita 6', '2022-06-23', '15:05:00', '1', 5, 3, 0);
-INSERT INTO `cita` (`id_cita`, `alias`, `fecha`, `hora`, `status`, `idUsuarios`, `idlocal`, `total_cita`) VALUES (26, 'cita chida', '2022-06-22', '15:00:00', '1', 3, 3, 0);
-INSERT INTO `cita` (`id_cita`, `alias`, `fecha`, `hora`, `status`, `idUsuarios`, `idlocal`, `total_cita`) VALUES (27, 'cita chida 2', '2022-06-18', '15:20:00', '1', 5, 5, 0);
-INSERT INTO `cita` (`id_cita`, `alias`, `fecha`, `hora`, `status`, `idUsuarios`, `idlocal`, `total_cita`) VALUES (28, 'cita chida 2', '2022-06-18', '15:20:00', '1', 5, 5, 0);
-INSERT INTO `cita` (`id_cita`, `alias`, `fecha`, `hora`, `status`, `idUsuarios`, `idlocal`, `total_cita`) VALUES (29, 'cita chida ahora si', '2022-06-17', '15:28:00', '1', 5, 5, 0);
-INSERT INTO `cita` (`id_cita`, `alias`, `fecha`, `hora`, `status`, `idUsuarios`, `idlocal`, `total_cita`) VALUES (30, 'ahora si va el bueno', '2022-06-24', '15:30:00', '1', 5, 5, 80);
+INSERT INTO `cita` (`id_cita`, `alias`, `fecha`, `hora`, `status`, `idUsuarios`, `idlocal`, `total_cita`) VALUES (10, 'Corte jose', '2022-06-25', '17:00:00', '0', 5, 5, 0);
+INSERT INTO `cita` (`id_cita`, `alias`, `fecha`, `hora`, `status`, `idUsuarios`, `idlocal`, `total_cita`) VALUES (11, 'Teñido de pelo', '2022-06-25', '18:09:00', '0', 5, 3, 0);
+INSERT INTO `cita` (`id_cita`, `alias`, `fecha`, `hora`, `status`, `idUsuarios`, `idlocal`, `total_cita`) VALUES (12, 'Cita 2', '2022-06-23', '18:18:00', '0', 5, 3, 0);
+INSERT INTO `cita` (`id_cita`, `alias`, `fecha`, `hora`, `status`, `idUsuarios`, `idlocal`, `total_cita`) VALUES (13, 'Cita 2', '2022-06-23', '18:18:00', '0', 5, 3, 0);
+INSERT INTO `cita` (`id_cita`, `alias`, `fecha`, `hora`, `status`, `idUsuarios`, `idlocal`, `total_cita`) VALUES (14, 'Cita 2', '2022-06-23', '18:18:00', '0', 5, 3, 0);
+INSERT INTO `cita` (`id_cita`, `alias`, `fecha`, `hora`, `status`, `idUsuarios`, `idlocal`, `total_cita`) VALUES (15, 'Cita 2', '2022-06-23', '18:18:00', '0', 5, 3, 0);
+INSERT INTO `cita` (`id_cita`, `alias`, `fecha`, `hora`, `status`, `idUsuarios`, `idlocal`, `total_cita`) VALUES (16, 'Cita 2', '2022-06-23', '18:18:00', '0', 5, 3, 0);
+INSERT INTO `cita` (`id_cita`, `alias`, `fecha`, `hora`, `status`, `idUsuarios`, `idlocal`, `total_cita`) VALUES (17, 'Cita 3', '2022-06-24', '14:45:00', '0', 5, 3, 0);
+INSERT INTO `cita` (`id_cita`, `alias`, `fecha`, `hora`, `status`, `idUsuarios`, `idlocal`, `total_cita`) VALUES (18, 'Cita 3', '2022-06-24', '14:45:00', '0', 5, 3, 0);
+INSERT INTO `cita` (`id_cita`, `alias`, `fecha`, `hora`, `status`, `idUsuarios`, `idlocal`, `total_cita`) VALUES (19, 'Cita 3', '2022-06-24', '14:45:00', '0', 5, 3, 0);
+INSERT INTO `cita` (`id_cita`, `alias`, `fecha`, `hora`, `status`, `idUsuarios`, `idlocal`, `total_cita`) VALUES (20, 'Cita 3', '2022-06-24', '14:45:00', '0', 5, 3, 0);
+INSERT INTO `cita` (`id_cita`, `alias`, `fecha`, `hora`, `status`, `idUsuarios`, `idlocal`, `total_cita`) VALUES (21, 'Cita 3', '2022-06-24', '14:45:00', '0', 5, 3, 0);
+INSERT INTO `cita` (`id_cita`, `alias`, `fecha`, `hora`, `status`, `idUsuarios`, `idlocal`, `total_cita`) VALUES (22, 'cita 4', '2022-06-24', '14:49:00', '0', 5, 3, 0);
+INSERT INTO `cita` (`id_cita`, `alias`, `fecha`, `hora`, `status`, `idUsuarios`, `idlocal`, `total_cita`) VALUES (23, 'cita 4', '2022-06-24', '14:49:00', '0', 5, 3, 0);
+INSERT INTO `cita` (`id_cita`, `alias`, `fecha`, `hora`, `status`, `idUsuarios`, `idlocal`, `total_cita`) VALUES (24, 'cita 5', '2022-06-11', '14:50:00', '0', 5, 5, 0);
+INSERT INTO `cita` (`id_cita`, `alias`, `fecha`, `hora`, `status`, `idUsuarios`, `idlocal`, `total_cita`) VALUES (25, 'cita 6', '2022-06-23', '15:05:00', '0', 5, 3, 0);
+INSERT INTO `cita` (`id_cita`, `alias`, `fecha`, `hora`, `status`, `idUsuarios`, `idlocal`, `total_cita`) VALUES (26, 'cita chida', '2022-06-22', '15:00:00', '0', 3, 3, 0);
+INSERT INTO `cita` (`id_cita`, `alias`, `fecha`, `hora`, `status`, `idUsuarios`, `idlocal`, `total_cita`) VALUES (27, 'cita chida 2', '2022-06-18', '15:20:00', '0', 5, 5, 0);
+INSERT INTO `cita` (`id_cita`, `alias`, `fecha`, `hora`, `status`, `idUsuarios`, `idlocal`, `total_cita`) VALUES (28, 'cita chida 2', '2022-06-18', '15:20:00', '0', 5, 5, 0);
+INSERT INTO `cita` (`id_cita`, `alias`, `fecha`, `hora`, `status`, `idUsuarios`, `idlocal`, `total_cita`) VALUES (29, 'cita chida ahora si', '2022-06-17', '15:28:00', '0', 5, 5, 0);
+INSERT INTO `cita` (`id_cita`, `alias`, `fecha`, `hora`, `status`, `idUsuarios`, `idlocal`, `total_cita`) VALUES (30, 'ahora si va el bueno', '2022-06-24', '15:30:00', '0', 5, 5, 80);
+INSERT INTO `cita` (`id_cita`, `alias`, `fecha`, `hora`, `status`, `idUsuarios`, `idlocal`, `total_cita`) VALUES (31, 'Corte de pelo', '2022-06-24', '15:30:00', '0', 5, 3, 0);
+INSERT INTO `cita` (`id_cita`, `alias`, `fecha`, `hora`, `status`, `idUsuarios`, `idlocal`, `total_cita`) VALUES (32, 'Teñido barba', '2022-06-25', '17:45:00', '0', 5, 3, 80);
+INSERT INTO `cita` (`id_cita`, `alias`, `fecha`, `hora`, `status`, `idUsuarios`, `idlocal`, `total_cita`) VALUES (33, 'Pulida', '2022-06-30', '19:20:00', '0', 5, 5, 170);
+INSERT INTO `cita` (`id_cita`, `alias`, `fecha`, `hora`, `status`, `idUsuarios`, `idlocal`, `total_cita`) VALUES (34, 'Pulida', '2022-06-30', '19:20:00', '0', 5, 5, 170);
+INSERT INTO `cita` (`id_cita`, `alias`, `fecha`, `hora`, `status`, `idUsuarios`, `idlocal`, `total_cita`) VALUES (35, 'Pulida', '2022-06-30', '19:20:00', '0', 5, 5, 170);
+INSERT INTO `cita` (`id_cita`, `alias`, `fecha`, `hora`, `status`, `idUsuarios`, `idlocal`, `total_cita`) VALUES (36, 'Pulida', '2022-06-30', '19:20:00', '0', 5, 5, 170);
+INSERT INTO `cita` (`id_cita`, `alias`, `fecha`, `hora`, `status`, `idUsuarios`, `idlocal`, `total_cita`) VALUES (37, 'Pulida', '2022-06-30', '19:20:00', '0', 5, 5, 170);
+INSERT INTO `cita` (`id_cita`, `alias`, `fecha`, `hora`, `status`, `idUsuarios`, `idlocal`, `total_cita`) VALUES (38, 'Corte chido', '2022-06-30', '16:45:00', '0', 5, 5, 170);
+INSERT INTO `cita` (`id_cita`, `alias`, `fecha`, `hora`, `status`, `idUsuarios`, `idlocal`, `total_cita`) VALUES (39, 'Corte chido', '2022-06-30', '16:45:00', '0', 5, 5, 170);
+INSERT INTO `cita` (`id_cita`, `alias`, `fecha`, `hora`, `status`, `idUsuarios`, `idlocal`, `total_cita`) VALUES (40, 'Corte chido', '2022-06-30', '16:45:00', '0', 5, 5, 170);
+INSERT INTO `cita` (`id_cita`, `alias`, `fecha`, `hora`, `status`, `idUsuarios`, `idlocal`, `total_cita`) VALUES (41, 'Corte chido', '2022-06-30', '16:45:00', '0', 5, 5, 170);
+INSERT INTO `cita` (`id_cita`, `alias`, `fecha`, `hora`, `status`, `idUsuarios`, `idlocal`, `total_cita`) VALUES (42, 'Corte chido', '2022-06-30', '16:45:00', '0', 5, 5, 170);
+INSERT INTO `cita` (`id_cita`, `alias`, `fecha`, `hora`, `status`, `idUsuarios`, `idlocal`, `total_cita`) VALUES (43, 'Corte jose', '2022-06-18', '16:51:00', '0', 5, 3, 170);
+INSERT INTO `cita` (`id_cita`, `alias`, `fecha`, `hora`, `status`, `idUsuarios`, `idlocal`, `total_cita`) VALUES (44, 'Corte jose', '2022-06-18', '16:51:00', '0', 5, 3, 170);
+INSERT INTO `cita` (`id_cita`, `alias`, `fecha`, `hora`, `status`, `idUsuarios`, `idlocal`, `total_cita`) VALUES (45, 'Corte chido', '2022-06-30', '15:15:00', '1', 5, 5, 90);
+INSERT INTO `cita` (`id_cita`, `alias`, `fecha`, `hora`, `status`, `idUsuarios`, `idlocal`, `total_cita`) VALUES (46, 'cita20', '2022-06-30', '17:23:00', '0', 5, 5, 0);
+INSERT INTO `cita` (`id_cita`, `alias`, `fecha`, `hora`, `status`, `idUsuarios`, `idlocal`, `total_cita`) VALUES (47, 'cita20', '2022-06-30', '17:23:00', '1', 5, 5, 350);
 COMMIT;
 
 -- ----------------------------
@@ -81,7 +98,7 @@ CREATE TABLE `detalle_cita` (
   KEY `id_cita_dcita` (`id_cita_dcita`) USING BTREE,
   CONSTRAINT `id_cita_dcita` FOREIGN KEY (`id_cita_dcita`) REFERENCES `cita` (`id_cita`) ON DELETE RESTRICT ON UPDATE CASCADE,
   CONSTRAINT `id_servicio_dcita` FOREIGN KEY (`id_servicio_dcita`) REFERENCES `servicio` (`id_servicio`) ON DELETE RESTRICT ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1 ROW_FORMAT=DYNAMIC;
+) ENGINE=InnoDB AUTO_INCREMENT=38 DEFAULT CHARSET=latin1 ROW_FORMAT=DYNAMIC;
 
 -- ----------------------------
 -- Records of detalle_cita
@@ -90,6 +107,34 @@ BEGIN;
 INSERT INTO `detalle_cita` (`id_dtalle_cita`, `id_cita_dcita`, `id_servicio_dcita`, `cantidad_cita`) VALUES (3, 6, 3, 2);
 INSERT INTO `detalle_cita` (`id_dtalle_cita`, `id_cita_dcita`, `id_servicio_dcita`, `cantidad_cita`) VALUES (4, 9, 4, 3);
 INSERT INTO `detalle_cita` (`id_dtalle_cita`, `id_cita_dcita`, `id_servicio_dcita`, `cantidad_cita`) VALUES (5, 30, 5, 1);
+INSERT INTO `detalle_cita` (`id_dtalle_cita`, `id_cita_dcita`, `id_servicio_dcita`, `cantidad_cita`) VALUES (6, 32, 5, 1);
+INSERT INTO `detalle_cita` (`id_dtalle_cita`, `id_cita_dcita`, `id_servicio_dcita`, `cantidad_cita`) VALUES (7, 33, 4, 1);
+INSERT INTO `detalle_cita` (`id_dtalle_cita`, `id_cita_dcita`, `id_servicio_dcita`, `cantidad_cita`) VALUES (8, 33, 5, 1);
+INSERT INTO `detalle_cita` (`id_dtalle_cita`, `id_cita_dcita`, `id_servicio_dcita`, `cantidad_cita`) VALUES (9, 34, 4, 1);
+INSERT INTO `detalle_cita` (`id_dtalle_cita`, `id_cita_dcita`, `id_servicio_dcita`, `cantidad_cita`) VALUES (10, 34, 5, 1);
+INSERT INTO `detalle_cita` (`id_dtalle_cita`, `id_cita_dcita`, `id_servicio_dcita`, `cantidad_cita`) VALUES (11, 35, 4, 1);
+INSERT INTO `detalle_cita` (`id_dtalle_cita`, `id_cita_dcita`, `id_servicio_dcita`, `cantidad_cita`) VALUES (12, 35, 5, 1);
+INSERT INTO `detalle_cita` (`id_dtalle_cita`, `id_cita_dcita`, `id_servicio_dcita`, `cantidad_cita`) VALUES (13, 36, 4, 1);
+INSERT INTO `detalle_cita` (`id_dtalle_cita`, `id_cita_dcita`, `id_servicio_dcita`, `cantidad_cita`) VALUES (14, 36, 5, 1);
+INSERT INTO `detalle_cita` (`id_dtalle_cita`, `id_cita_dcita`, `id_servicio_dcita`, `cantidad_cita`) VALUES (15, 37, 4, 1);
+INSERT INTO `detalle_cita` (`id_dtalle_cita`, `id_cita_dcita`, `id_servicio_dcita`, `cantidad_cita`) VALUES (16, 37, 5, 1);
+INSERT INTO `detalle_cita` (`id_dtalle_cita`, `id_cita_dcita`, `id_servicio_dcita`, `cantidad_cita`) VALUES (17, 38, 4, 1);
+INSERT INTO `detalle_cita` (`id_dtalle_cita`, `id_cita_dcita`, `id_servicio_dcita`, `cantidad_cita`) VALUES (18, 38, 5, 1);
+INSERT INTO `detalle_cita` (`id_dtalle_cita`, `id_cita_dcita`, `id_servicio_dcita`, `cantidad_cita`) VALUES (19, 39, 4, 1);
+INSERT INTO `detalle_cita` (`id_dtalle_cita`, `id_cita_dcita`, `id_servicio_dcita`, `cantidad_cita`) VALUES (20, 39, 5, 1);
+INSERT INTO `detalle_cita` (`id_dtalle_cita`, `id_cita_dcita`, `id_servicio_dcita`, `cantidad_cita`) VALUES (21, 40, 4, 1);
+INSERT INTO `detalle_cita` (`id_dtalle_cita`, `id_cita_dcita`, `id_servicio_dcita`, `cantidad_cita`) VALUES (22, 40, 5, 1);
+INSERT INTO `detalle_cita` (`id_dtalle_cita`, `id_cita_dcita`, `id_servicio_dcita`, `cantidad_cita`) VALUES (23, 41, 4, 1);
+INSERT INTO `detalle_cita` (`id_dtalle_cita`, `id_cita_dcita`, `id_servicio_dcita`, `cantidad_cita`) VALUES (24, 41, 5, 1);
+INSERT INTO `detalle_cita` (`id_dtalle_cita`, `id_cita_dcita`, `id_servicio_dcita`, `cantidad_cita`) VALUES (25, 42, 4, 1);
+INSERT INTO `detalle_cita` (`id_dtalle_cita`, `id_cita_dcita`, `id_servicio_dcita`, `cantidad_cita`) VALUES (26, 42, 5, 1);
+INSERT INTO `detalle_cita` (`id_dtalle_cita`, `id_cita_dcita`, `id_servicio_dcita`, `cantidad_cita`) VALUES (27, 43, 4, 1);
+INSERT INTO `detalle_cita` (`id_dtalle_cita`, `id_cita_dcita`, `id_servicio_dcita`, `cantidad_cita`) VALUES (28, 43, 5, 1);
+INSERT INTO `detalle_cita` (`id_dtalle_cita`, `id_cita_dcita`, `id_servicio_dcita`, `cantidad_cita`) VALUES (29, 44, 4, 1);
+INSERT INTO `detalle_cita` (`id_dtalle_cita`, `id_cita_dcita`, `id_servicio_dcita`, `cantidad_cita`) VALUES (30, 44, 5, 1);
+INSERT INTO `detalle_cita` (`id_dtalle_cita`, `id_cita_dcita`, `id_servicio_dcita`, `cantidad_cita`) VALUES (31, 45, 4, 1);
+INSERT INTO `detalle_cita` (`id_dtalle_cita`, `id_cita_dcita`, `id_servicio_dcita`, `cantidad_cita`) VALUES (36, 47, 3, 1);
+INSERT INTO `detalle_cita` (`id_dtalle_cita`, `id_cita_dcita`, `id_servicio_dcita`, `cantidad_cita`) VALUES (37, 47, 6, 1);
 COMMIT;
 
 -- ----------------------------
@@ -124,7 +169,7 @@ CREATE TABLE `servicio` (
   `estatus` bit(1) DEFAULT NULL,
   `tiempo` varchar(255) CHARACTER SET latin1 COLLATE latin1_swedish_ci DEFAULT NULL,
   PRIMARY KEY (`id_servicio`) USING BTREE
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1 ROW_FORMAT=DYNAMIC;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1 ROW_FORMAT=DYNAMIC;
 
 -- ----------------------------
 -- Records of servicio
@@ -133,6 +178,7 @@ BEGIN;
 INSERT INTO `servicio` (`id_servicio`, `nombre_servicio`, `precio`, `estatus`, `tiempo`) VALUES (3, 'Teñido', 100, b'1', '1.5 hrs');
 INSERT INTO `servicio` (`id_servicio`, `nombre_servicio`, `precio`, `estatus`, `tiempo`) VALUES (4, 'Corte Cabello Hombre', 90, b'1', '20 mins');
 INSERT INTO `servicio` (`id_servicio`, `nombre_servicio`, `precio`, `estatus`, `tiempo`) VALUES (5, 'Teñido Barba', 80, b'1', '40 mins');
+INSERT INTO `servicio` (`id_servicio`, `nombre_servicio`, `precio`, `estatus`, `tiempo`) VALUES (6, 'Uñas acrilicas', 250, b'1', '2 hrs');
 COMMIT;
 
 -- ----------------------------
@@ -160,6 +206,23 @@ INSERT INTO `usuario` (`id_usuarios`, `nombre`, `apellido1`, `telefono`, `email`
 INSERT INTO `usuario` (`id_usuarios`, `nombre`, `apellido1`, `telefono`, `email`, `contrasenia`, `token`, `permiso`) VALUES (4, 'Juan', 'Figueroa', '7731271279', 'juan@mail.com', '6789', 212, b'1');
 INSERT INTO `usuario` (`id_usuarios`, `nombre`, `apellido1`, `telefono`, `email`, `contrasenia`, `token`, `permiso`) VALUES (5, 'Jose', 'Madero', '5578941578', 'joseM@mail.com', 'jose1234', 296857253, b'0');
 COMMIT;
+
+-- ----------------------------
+-- Procedure structure for editar_cita
+-- ----------------------------
+DROP PROCEDURE IF EXISTS `editar_cita`;
+delimiter ;;
+CREATE PROCEDURE `editar_cita`(IN p_idCita int, p_alias varchar(255), IN p_fecha varchar(255),
+        IN p_hora varchar(255),
+                                                          IN p_local varchar(255))
+BEGIN
+  UPDATE cita set alias=(p_alias),fecha=(p_fecha),hora=(p_hora),idlocal=(p_local),total_cita='0'
+	where id_cita=p_idCita;
+	
+	delete from detalle_cita WHERE id_cita_dcita=p_idCita;
+END
+;;
+delimiter ;
 
 -- ----------------------------
 -- Procedure structure for proc_cancelar_cita

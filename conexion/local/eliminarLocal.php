@@ -9,6 +9,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
 
     if ($resultado) {
         //Redireccionamos al usuario
-        header('Location: ../../versLocales.php');
+        header('Location: ../../verLocales.php');
     }
 }

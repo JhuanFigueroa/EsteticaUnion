@@ -135,21 +135,24 @@ FROM
               ";
 
               $resultServ_cita=mysqli_query($db,$queryServ_cita);
-              $servicios_cita=mysqli_fetch_array($resultServ_cita);
+              $servicios_cita=[];
+              while ( $servicio_cita=mysqli_fetch_array($resultServ_cita)) {
+                array_push($servicios_cita,$servicio_cita[0]);
+              }
 
-               $i=0;
+                $i=0;
 
                 $query = "call proc_consul_servicios()";
                 $result = mysqli_query($db, $query);
-                while ($servicio = mysqli_fetch_array($result)) {
-                  if ($servicio[0]==$servicios_cita[$i]) {
+                while (($servicio = mysqli_fetch_array($result))) {
+                  if ($servicios_cita[$i]==$servicio[0]) {
                     echo "
                     <div class='form-check form-switch'>
                     <input class='form-check-input' type='checkbox' name='servicios[]' id='servicio' value='$servicio[0]' checked >
                     <label class='form-check-label' for='servicio'>$servicio[1] $$servicio[2]</label>
                   </div>
                         ";
-                        $i+=1;
+                        $i++;
                   }else{
                     echo "
                     <div class='form-check form-switch'>

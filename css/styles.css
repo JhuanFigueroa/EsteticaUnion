@@ -3,8 +3,8 @@
     padding: 0;
 }
 .contenedor-principal{
-    width: auto;
-    height: 700px;
+    width: 100%;
+    height: auto;
     grid-gap: 5px;
     text-align: center;
    display: grid;
@@ -12,8 +12,8 @@
     grid: 13% 5% 5% 77% 5% / repeat(4, 25%);
     grid-template-areas:
     "aside1 header header header" 
-    "aside1 span1 span1 span1"
     "aside1 nav nav nav"
+    "aside1 span1 span1 span1"
     "aside1 section section section"
     "aside1 footer footer footer"
 }
@@ -44,6 +44,9 @@ footer{
     grid-area: section;
     justify-content: center;
 }
+.boton{
+    height: 40px;
+}
 .imagenServicios{
     margin-top: 20px;
     margin-right: 20px;
@@ -62,4 +65,176 @@ nav{
 }
 .img{
     margin-left: 300px;
+}
+
+@media screen and (max-width:800px) {
+    .contenedor-principal{
+        max-width: 100%;
+        height: 100px;
+        text-align: center;
+       display: grid;
+        margin: 0 auto;
+        grid: 6% 10% 5% 5% 75% / repeat(4, 25%);
+        grid-template-areas:
+        "header header header header" 
+        "aside1 aside1 aside1 aside1"
+        "span1 span1 span1 span1"
+        "nav nav nav nav"
+        "section section section section"
+        "footer footer footer footer"
+    }
+    nav{
+        margin: 10px;
+    }
+    .aside1{
+        display: flex;
+        align-items: center;
+        max-width: 100%;
+    }
+    .btn{
+        width: 200px !important;
+        height: 39px;
+    }
+    .botones{
+        display: flex;
+        flex-direction: row;
+    }
+    .men{
+        display: none !important;
+    }
+    .botones{
+        display: flex;
+        flex-direction: row;
+    }
+    .btnasid{
+        margin: 10px;
+        height: 60px;
+    }
+    .btnasid1{
+        margin: 10px;
+        height: 60px;
+    }
+    .img{
+        margin-left: 10px;
+    }
+    .NombreUsuario{
+        font-size: 20px;
+    }
+    .fondo12{
+        background-image: url('../IMG/Fondo.png');
+        display: flex;
+        flex-direction: column-reverse;
+        grid-area: section;
+        align-items: center;
+    }
+    header{
+        height: 130px !important;
+    }
+    .cita{
+        background-color: antiquewhite;
+        border: 1px solid black;
+        display: flex;
+        justify-content: space-around;
+        padding: 0.5rem;
+        width: 400px;
+        align-items: center;
+    }
+    .citas-container{
+        padding: 5rem 6rem;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        align-items: center;
+    }
+}
+
+
+@media screen and (max-width:460px) {
+    .contenedor-principal{
+        width: 100%;
+        height: auto;
+        text-align: center;
+       display: grid;
+        margin: 0 auto;
+        grid: 6% 10% 5% 5% 75% / repeat(4, 25%);
+        grid-template-areas:
+        "header header header header" 
+        "aside1 aside1 aside1 aside1"
+        "span1 span1 span1 span1"
+        "nav nav nav nav"
+        "section section section section"
+        "footer footer footer footer"
+    }
+    nav{
+        margin: 10px;
+    }
+    .aside1{
+        display: flex;
+        align-items: center;
+        max-width: 100%;
+    }
+    .btn{
+        width: 200px !important;
+        height: 39px;
+        font-size: 10px !important;
+    }
+    .boton{
+        margin-right: 20px !important;
+    }
+    .botones{
+        display: flex !important;
+        flex-direction: column-reverse !important;
+        
+    }
+    .imglogo{
+        visibility: hidden !important;
+    }
+    .men{
+        visibility: hidden;
+    }
+    .botones{
+        display: flex;
+        flex-direction: row;
+    }
+    .btnasid{
+        margin: 10px;
+        height: 60px;
+        font-size: 20px;
+    }
+    .btnasid1{
+        margin: 10px;
+        height: 60px;
+    }
+    .img{
+        margin-left: 1px;
+    }
+    .NombreUsuario{
+        font-size: 20px;
+    }
+    .fondo12{
+        background-image: url('../IMG/Fondo.png');
+        display: flex;
+        flex-direction: column-reverse;
+        grid-area: section;
+        align-items: center;
+    }
+    header{
+        height: 130px !important;
+    }
+    .cita{
+        background-color: antiquewhite;
+        border: 1px solid black;
+        display: flex;
+        justify-content: space-around;
+        padding: 0.5rem;
+        width: 400px;
+        align-items: center;
+    }
+    .citas-container{
+        padding: 5rem 6rem;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        align-items: center;
+    }
 }
